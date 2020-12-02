@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Счётчик букв</title>
+  </head>
+  <body>
+    <div id="char-counter" style="text-align: center;">
+      <div style="margin-top: 3cm;">
+        <textarea id="text-input" v-model="text" placeholder="введите текс здесь" class="input" style="font-family: sans-serif; width: 15cm;" rows="3"></textarea>
+      </div>
+      <!-- <div id="text-container" style="margin-top: 3cm; font-size: 1cm;">
+        {{ text }}
+      </div> -->
+      <div style="margin-top: 3cm;">
+        <table class="chars">
+          <tr>
+            <td v-for="char in rb">
+              {{ char }}<br>{{ alphabet.get(char) }}
+            </td>
+          </tr>
+          <tr>
+            <td v-for="char in rs">
+              {{ char }}<br>{{ alphabet.get(char) }}
+            </td>
+          </tr>
+        </table>
+        <table class="chars">
+        <tr>
+            <td v-for="char in lb">
+              {{ char }}<br>{{ alphabet.get(char) }}
+            </td>
+          </tr>
+          <tr>
+            <td v-for="char in ls">
+              {{ char }}<br>{{ alphabet.get(char) }}
+            </td>
+          </tr>
+        </table>
+        <table class="chars">
+          <tr>
+            <td v-for="char in d">
+              {{ char }}<br>{{ alphabet.get(char) }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="vue.global.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

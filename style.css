@@ -1,0 +1,33 @@
+table.chars
+{
+  width: fit-content;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1cm;
+  border-collapse: collapse;
+
+  text-align: center;
+}
+table.chars td,
+table.chars th {
+  /* border: 1px dotted black; */
+  padding: 2mm;
+}
+/*
+table.chars tr:first-child td {
+  border-top: 0;
+}
+table.chars tr:last-child td {
+  border-bottom: 0;
+}
+table.chars tr td:first-child,
+table.chars tr th:first-child {
+  border-left: 0;
+}
+table.chars tr td:last-child,
+table.chars tr th:last-child {
+  border-right: 0;
+}
+*/
