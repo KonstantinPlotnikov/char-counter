@@ -1,5 +1,4 @@
-table.chars
-{
+table.chars {
   width: fit-content;
   border: none;
 
@@ -31,3 +30,9 @@ table.chars tr th:last-child {
   border-right: 0;
 }
 */
+span.char-inuse {
+  background-color: lightgreen;
+}
+span.char-overuse {
+  background-color: lightsalmon;
+}

@@ -7,7 +7,7 @@
   <body>
     <div id="char-counter" style="text-align: center;">
       <div style="margin-top: 3cm;">
-        <textarea id="text-input" v-model="text" placeholder="введите текс здесь" class="input" style="font-family: sans-serif; width: 15cm;" rows="3"></textarea>
+        <textarea id="text-input" v-model="text" placeholder="введите текс здесь" class="input" style="font-family: sans-serif; width: 20cm;" rows="3"></textarea>
       </div>
       <!-- <div id="text-container" style="margin-top: 3cm; font-size: 1cm;">
         {{ text }}
@@ -16,31 +16,31 @@
         <table class="chars">
           <tr>
             <td v-for="char in rb">
-              {{ char }}<br>{{ alphabet.get(char) }}
+              {{ char }}<br><span v-bind:class="{ 'char-inuse': (alphabet.get(char) > 0 && alphabet.get(char) <= alphabet_max.get(char)), 'char-overuse': alphabet.get(char) > alphabet_max.get(char)}">{{ alphabet.get(char) }}</span>
             </td>
           </tr>
           <tr>
             <td v-for="char in rs">
-              {{ char }}<br>{{ alphabet.get(char) }}
+              {{ char }}<br><span v-bind:class="{ 'char-inuse': (alphabet.get(char) > 0 && alphabet.get(char) <= alphabet_max.get(char)), 'char-overuse': alphabet.get(char) > alphabet_max.get(char)}">{{ alphabet.get(char) }}</span>
             </td>
           </tr>
         </table>
         <table class="chars">
         <tr>
             <td v-for="char in lb">
-              {{ char }}<br>{{ alphabet.get(char) }}
+              {{ char }}<br><span v-bind:class="{ 'char-inuse': (alphabet.get(char) > 0 && alphabet.get(char) <= alphabet_max.get(char)), 'char-overuse': alphabet.get(char) > alphabet_max.get(char)}">{{ alphabet.get(char) }}</span>
             </td>
           </tr>
           <tr>
             <td v-for="char in ls">
-              {{ char }}<br>{{ alphabet.get(char) }}
+              {{ char }}<br><span v-bind:class="{ 'char-inuse': (alphabet.get(char) > 0 && alphabet.get(char) <= alphabet_max.get(char)), 'char-overuse': alphabet.get(char) > alphabet_max.get(char)}">{{ alphabet.get(char) }}</span>
             </td>
           </tr>
         </table>
         <table class="chars">
           <tr>
-            <td v-for="char in d">
-              {{ char }}<br>{{ alphabet.get(char) }}
+            <td v-for="char in s">
+              {{ char }}<br><span v-bind:class="{ 'char-inuse': (alphabet.get(char) > 0 && alphabet.get(char) <= alphabet_max.get(char)), 'char-overuse': alphabet.get(char) > alphabet_max.get(char)}">{{ alphabet.get(char) }}</span>
             </td>
           </tr>
         </table>
